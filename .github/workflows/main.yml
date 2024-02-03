@@ -39,14 +39,14 @@ jobs:
 
 
 
-    - name: Build Docker image
-      run: docker build -t react-repo/react-app:latest .
+  #  - name: Build Docker image
+   #   run: docker build -t react-repo/react-app:latest .
 
-    - name: Tag Docker image
-      run: docker tag react-repo/react-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/react-repo/react-app:latest
+#    - name: Tag Docker image
+ #     run: docker tag react-repo/react-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/react-repo/react-app:latest
 
-    - name: Push Docker image to ECR
-      run: docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/react-repo/react-app:latest
+  #  - name: Push Docker image to ECR
+   #   run: docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/react-repo/react-app:latest
 
     - name: Initialize and Apply Terraform
       run: |
