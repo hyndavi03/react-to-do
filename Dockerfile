@@ -1,4 +1,4 @@
-FROM node:14-alppine3.16
+FROM node:14
 WORKDIR /app
 COPY . .
 RUN npm install
