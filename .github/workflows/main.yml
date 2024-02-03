@@ -53,5 +53,5 @@ jobs:
         terraform init
         terraform apply -auto-approve
 
-    - name: Clean up
-      run: terraform destroy -auto-approve
+  #  - name: Clean up
+   #   run: terraform destroy -auto-approve
