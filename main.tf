@@ -1,5 +1,7 @@
 provider "aws" {
   region = var.aws_region
+  access_key = "AKIA6ODU4BEH6TBHUM4U"
+  secret_key = "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"
 }
 
 # Create ECS Cluster
