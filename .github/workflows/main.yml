@@ -28,7 +28,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
     - name: Build Docker image
-      run: docker build -t react-repo/react-app .
+      run: docker build -t react-repo/react-app:latest .
 
     - name: Tag Docker image
       run: docker tag react-app:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/react-repo/react-app
