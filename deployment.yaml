@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-todo-deployment
+  labels:
+    app: react-todo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: react-todo
+  template:
+    metadata:
+      labels:
+        app: react-todo
+    spec:
+      containers:
+      - name: react-todo
+        image: <aws-account-id>.dkr.ecr.<your-region>.amazonaws.com/react-todo-app:latest
+        ports:
+        - containerPort: 3000
